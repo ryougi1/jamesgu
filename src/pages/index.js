@@ -1,16 +1,32 @@
-import React from "react"
-import Layout from "../components/layout"
-import Hero from "../components/hero"
+import React from "react";
+import styled from "styled-components";
+import { Hero } from "@components";
 
-const IndexPage = ({ data }) => {
-  return (
-    <Layout>
-      <Hero content={data.hero.edges[0].node} />
-    </Layout>
-  )
-}
+const StyledMainContainer = styled.main`
+  counter-reset: section;
+  padding: 0 100px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
-export default IndexPage
+  &.fillHeight {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+`;
+
+const IndexPage = ({ location, data }) => (
+  <StyledMainContainer className="fillHeight">
+    <Hero data={data.hero.edges} />
+  </StyledMainContainer>
+);
+
+export default IndexPage;
 
 export const pageQuery = graphql`
   {
@@ -19,14 +35,14 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
-            greetings
-            emoji
-            subtitlePrefix
-            subtitleHighlight
+            name
+            subtitle
+            buttonText
+            text
           }
-          rawMarkdownBody
+          html
         }
       }
     }
   }
-`
+`;
