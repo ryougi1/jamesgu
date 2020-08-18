@@ -1,8 +1,8 @@
-import React from "react";
-import { email } from "@config";
-import styled from "styled-components";
-import { theme, mixins, Section } from "@styles";
-import PropTypes from "prop-types";
+import React from 'react';
+import { email } from '@config';
+import styled from 'styled-components';
+import { theme, mixins, Section } from '@styles';
+import PropTypes from 'prop-types';
 
 const { colors, fonts } = theme;
 

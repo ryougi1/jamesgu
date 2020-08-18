@@ -36,8 +36,6 @@ module.exports = {
     },
   ],
 
-  navHeight: 100,
-
   colors: {
     base03: "#002b36",
     base02: "#073642",
@@ -56,4 +54,23 @@ module.exports = {
     cyan: "#2aa198",
     green: "#859900",
   },
-}
+
+  navLinks: [
+    {
+      name: "About",
+      url: "/#about",
+    },
+    {
+      name: "Experience",
+      url: "/#jobs",
+    },
+    {
+      name: "Work",
+      url: "/#projects",
+    },
+    {
+      name: "Contact",
+      url: "/#contact",
+    },
+  ],
+};

@@ -1,6 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Hero } from "@components";
+import React from 'react';
+import { graphql } from 'gatsby';
+import styled from 'styled-components';
+import { Hero, Layout } from '@components';
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
@@ -21,9 +22,11 @@ const StyledMainContainer = styled.main`
 `;
 
 const IndexPage = ({ location, data }) => (
-  <StyledMainContainer className="fillHeight">
-    <Hero data={data.hero.edges} />
-  </StyledMainContainer>
+  <Layout location={location}>
+    <StyledMainContainer className="fillHeight">
+      <Hero data={data.hero.edges} />
+    </StyledMainContainer>
+  </Layout>
 );
 
 export default IndexPage;
