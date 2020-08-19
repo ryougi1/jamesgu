@@ -13,7 +13,7 @@ const StyledContainer = styled.header`
   align-items: center;
   position: fixed;
   height: 100vh;
-  left: 5px;
+  left: 20px;
   right: auto;
   z-index: 1;
   font-family: ${fonts.SFMono};
@@ -79,7 +79,7 @@ const StyledResumeButton = styled.a`
   ${mixins.smallButton};
 `;
 
-const SidebarLeft = ({}) => (
+const SidebarLeft = () => (
   <StyledContainer>
     <StyledTop>
       <StyledList>

@@ -36,7 +36,7 @@ const StyledEmailLink = styled.a`
   padding: 10px;
 `;
 
-const SidebarRight = ({}) => (
+const SidebarRight = () => (
   <StyledContainer>
     <StyledLinkWrapper>
       <StyledEmailLink href={`mailto:${email}`}>{email}</StyledEmailLink>

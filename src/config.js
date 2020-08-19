@@ -54,23 +54,4 @@ module.exports = {
     cyan: '#2aa198',
     green: '#859900',
   },
-
-  navLinks: [
-    {
-      name: 'About',
-      url: '/#about',
-    },
-    {
-      name: 'Experience',
-      url: '/#jobs',
-    },
-    {
-      name: 'Work',
-      url: '/#projects',
-    },
-    {
-      name: 'Contact',
-      url: '/#contact',
-    },
-  ],
 };

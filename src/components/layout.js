@@ -19,10 +19,8 @@ const Layout = ({ children, location }) => {
 
       <GlobalStyle />
 
-      {/* <SkipToContent href="#content">Skip to Content</SkipToContent> */}
       <StyledContent>
         <SidebarLeft />
-        {/* {/* <Social isHome={isHome} /> */}
         <SidebarRight />
 
         <div id="content">

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IconGitHub, IconLinkedin, IconExternal } from '@components/icons';
+import { IconGitHub, IconLinkedin } from '@components/icons';
 
 const FormattedIcon = ({ name }) => {
   switch (name) {

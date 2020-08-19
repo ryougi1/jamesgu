@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { theme, mixins, Section } from '@styles';
 import PropTypes from 'prop-types';
 
-const { colors, fonts } = theme;
+const { colors, fonts, fontSizes } = theme;
 
 const StyledContainer = styled(Section)`
   ${mixins.flexCenter};
@@ -18,18 +18,20 @@ const StyledContainer = styled(Section)`
 const StyledOverline = styled.h1`
   color: ${colors.yellow};
   margin: 0 0 20px 3px;
-  font-size: 16px;
+  font-size: ${fontSizes.md};
   font-family: ${fonts.SFMono};
   font-weight: normal;
 `;
 const StyledTitle = styled.h2`
   font-size: 80px;
+  font-family: ${fonts.Calibre};
   line-height: 1.1;
   margin: 0;
   color: ${colors.grey4};
 `;
 const StyledSubtitle = styled.h3`
   font-size: 80px;
+  font-family: ${fonts.Calibre};
   line-height: 1.1;
   color: ${colors.grey2};
 `;
