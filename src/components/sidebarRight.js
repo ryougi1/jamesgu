@@ -1,11 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { email } from '@config';
-import { Side } from '@components';
 import styled from 'styled-components';
 import { theme } from '@styles';
 const { colors, fonts, fontSizes } = theme;
 
+const StyledContainer = styled.div`
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: 20px;
+  color: ${colors.grey2};
+`;
 const StyledLinkWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,27 +27,21 @@ const StyledLinkWrapper = styled.div`
     background-color: ${colors.grey2};
   }
 `;
-
 const StyledEmailLink = styled.a`
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.xs};
-  color: ${colors.yellow};
   letter-spacing: 0.1em;
   writing-mode: vertical-rl;
   margin: 20px auto;
   padding: 10px;
 `;
 
-const SidebarRight = ({ isHome }) => (
-  <Side isHome={isHome} orientation="right">
+const SidebarRight = ({}) => (
+  <StyledContainer>
     <StyledLinkWrapper>
       <StyledEmailLink href={`mailto:${email}`}>{email}</StyledEmailLink>
     </StyledLinkWrapper>
-  </Side>
+  </StyledContainer>
 );
-
-SidebarRight.propTypes = {
-  isHome: PropTypes.bool,
-};
 
 export default SidebarRight;

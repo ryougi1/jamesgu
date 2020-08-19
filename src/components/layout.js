@@ -11,7 +11,6 @@ const StyledContent = styled.div`
 `;
 
 const Layout = ({ children, location }) => {
-  const isHome = location.pathname === '/';
   console.log(children);
 
   return (
@@ -22,9 +21,9 @@ const Layout = ({ children, location }) => {
 
       {/* <SkipToContent href="#content">Skip to Content</SkipToContent> */}
       <StyledContent>
-        <SidebarLeft isHome={isHome} />
+        <SidebarLeft />
         {/* {/* <Social isHome={isHome} /> */}
-        <SidebarRight isHome={isHome} />
+        <SidebarRight />
 
         <div id="content">
           {children}
