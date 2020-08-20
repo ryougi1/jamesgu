@@ -29,9 +29,12 @@ const theme = {
     xs: '12px',
     sm: '14px',
     md: '16px',
+    lg: '18px',
+    xl: '20px',
+    h: '32px',
   },
 
-  borderRadius: '3px',
+  borderRadius: '10px',
 };
 
 export default theme;

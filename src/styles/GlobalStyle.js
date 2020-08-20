@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
-import { theme } from '@styles';
 import FontFaces from './fonts';
-const { colors } = theme;
+import theme from './theme';
+import mixins from './mixins';
+const { colors, fonts, fontSizes } = theme;
 
 const GlobalStyle = createGlobalStyle`
   ${FontFaces};
@@ -48,6 +49,27 @@ a {
     height: 100%;
     fill: currentColor;
     vertical-align: middle;
+  }
+
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background-color: ${colors.lbg2};
+    color: ${colors.grey2};
+    line-height: 1.3;
+    font-family: ${fonts.Calibre};
+    font-size: ${fontSizes.xl};
+    &.hidden {
+      overflow: hidden;
+    }
+  }
+
+  gatsby-image-outer-wrapper {
+    height: 100%;
   }
 `;
 

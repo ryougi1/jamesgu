@@ -12,6 +12,7 @@ const StyledContainer = styled.div`
   right: 20px;
   color: ${colors.grey2};
 `;
+
 const StyledLinkWrapper = styled.div`
   display: flex;
   flex-direction: column;

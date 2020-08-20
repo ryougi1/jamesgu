@@ -40,6 +40,40 @@ const mixins = {
     text-decoration: none;
     cursor: pointer;
   `,
+
+  inlineLink: css`
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    transition: ${theme.transition};
+    cursor: pointer;
+    color: ${colors.green};
+    &:hover,
+    &:focus,
+    &:active {
+      color: ${colors.green};
+      outline: 0;
+      &:after {
+        width: 100%;
+      }
+      & > * {
+        color: ${colors.green} !important;
+        transition: ${theme.transition};
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      position: relative;
+      bottom: 0.37em;
+      background-color: ${colors.green};
+      transition: ${theme.transition};
+      opacity: 0.5;
+    }
+  `,
 };
 
 export default mixins;

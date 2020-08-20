@@ -39,6 +39,8 @@ const StyledDescription = styled.div`
   margin-top: 25px;
   width: 50%;
   max-width: 500px;
+  font-family: ${fonts.SFMono};
+  font-size: ${fontSizes.md};
 `;
 const StyledEmailLink = styled.a`
   ${mixins.bigButton};
@@ -47,18 +49,16 @@ const StyledEmailLink = styled.a`
 
 const Hero = ({ data }) => {
   const { frontmatter } = data[0].node;
-  // console.log(frontmatter);
+  const { title, name, subtitle, text, buttonText } = frontmatter;
 
   return (
     <StyledContainer>
-      <StyledOverline>{frontmatter.title}</StyledOverline>
-      <StyledTitle>{frontmatter.name}</StyledTitle>
-      <StyledSubtitle>{frontmatter.subtitle}</StyledSubtitle>
-      <StyledDescription>{frontmatter.text}</StyledDescription>
+      <StyledOverline>{title}</StyledOverline>
+      <StyledTitle>{name}</StyledTitle>
+      <StyledSubtitle>{subtitle}</StyledSubtitle>
+      <StyledDescription>{text}</StyledDescription>
       <div>
-        <StyledEmailLink href={`mailto:${email}`}>
-          {frontmatter.buttonText}
-        </StyledEmailLink>
+        <StyledEmailLink href={`mailto:${email}`}>{buttonText}</StyledEmailLink>
       </div>
     </StyledContainer>
   );
