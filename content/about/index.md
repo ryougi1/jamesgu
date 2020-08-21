@@ -1,7 +1,7 @@
 ---
 title: 'About Me'
 avatar: './me.png'
-hobbies: 'Other personal interests of mine are sports, travelling, cooking & gaming.'
+hobbies: 'Other personal interests of mine include sports, travelling, cooking & gaming.'
 skills:
   - JavaScript (ES6+)
   - Rust

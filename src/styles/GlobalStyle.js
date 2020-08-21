@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import FontFaces from './fonts';
 import theme from './theme';
-import mixins from './mixins';
 const { colors, fonts, fontSizes } = theme;
 
 const GlobalStyle = createGlobalStyle`

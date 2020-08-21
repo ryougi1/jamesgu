@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { navLinks, socialMedia } from '@config';
-import { FormattedIcon } from '@components/icons';
+import { FormattedIcon, IconLogo } from '@components/icons';
 import { theme, mixins } from '@styles';
 const { colors, fonts, fontSizes } = theme;
 
@@ -78,10 +78,24 @@ const StyledSMLink = styled.a`
 const StyledResumeButton = styled.a`
   ${mixins.smallButton};
 `;
+const StyledLogo = styled.div`
+  ${mixins.flexCenter};
+  padding: 20px 0px 10px 0px;
+  a {
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+`;
 
 const SidebarLeft = () => (
   <StyledContainer>
     <StyledTop>
+      <StyledLogo tabindex="-1">
+        <a href="/" aria-label="home">
+          <IconLogo />
+        </a>
+      </StyledLogo>
       <StyledList>
         {navLinks &&
           navLinks.map(({ url, name }) => (
