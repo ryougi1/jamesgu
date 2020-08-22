@@ -11,6 +11,7 @@ const StyledContainer = styled(Section)`
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
+  padding: 50px 0px 150px 0px;
   div {
     width: 100%;
   }

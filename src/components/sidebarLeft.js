@@ -92,7 +92,7 @@ const SidebarLeft = () => (
   <StyledContainer>
     <StyledTop>
       <StyledLogo tabindex="-1">
-        <a href="/" aria-label="home">
+        <a href="#top">
           <IconLogo />
         </a>
       </StyledLogo>

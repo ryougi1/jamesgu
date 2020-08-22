@@ -89,8 +89,8 @@ const StyledJobDetails = styled.h5`
 const Jobs = ({ data }) => {
   const [activeTabId, setActiveTabId] = useState(0);
   const tabs = useRef([]);
-  console.log(tabs);
-  console.log(data);
+  // console.log(tabs);
+  // console.log(data);
 
   return (
     <StyledContainer id="jobs">
