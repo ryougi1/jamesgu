@@ -25,16 +25,16 @@ const StyledTabButton = styled.button`
   ${mixins.link};
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   width: 100%;
   background-color: transparent;
   height: ${theme.tabHeight}px;
   padding: 0 20px 2px;
-  border-left: 2px solid ${colors.grey2};
-  text-align: left;
+  border-right: 4px solid ${colors.grey2};
   white-space: nowrap;
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.sm};
-  color: ${props => (props.isActive ? colors.yellow : colors.grey2)};
+  border-color: ${props => (props.isActive ? colors.yellow : colors.grey2)};
   &:hover,
   &:focus {
     background-color: ${colors.lbg1};
@@ -43,9 +43,7 @@ const StyledTabButton = styled.button`
 const StyledHighlight = styled.span`
   display: block;
   background: ${colors.yellow};
-  width: 2px;
   height: ${theme.tabHeight}px;
-  border-radius: ${theme.borderRadius};
   position: absolute;
   top: 0;
   left: 0;
@@ -62,10 +60,6 @@ const StyledTabContent = styled.div`
   }
   a {
     ${mixins.inlineLink};
-  }
-  &:hover,
-  &:focus {
-    border-width: 0px;
   }
 `;
 const StyledJobTitle = styled.h4`
@@ -119,7 +113,6 @@ const Jobs = ({ data }) => {
             })}
           <StyledHighlight activeTabId={activeTabId} />
         </StyledTabList>
-
         {data &&
           data.map(({ node }, i) => {
             const { frontmatter, html } = node;

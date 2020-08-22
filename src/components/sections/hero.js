@@ -40,7 +40,6 @@ const StyledDescription = styled.div`
   margin-top: 25px;
   width: 50%;
   max-width: 500px;
-  font-family: ${fonts.SFMono};
   font-size: ${fontSizes.md};
 `;
 const StyledEmailLink = styled.a`

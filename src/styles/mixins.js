@@ -26,6 +26,10 @@ const mixins = {
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
+    &:hover,
+    &:focus {
+      background-color: ${colors.lbg1};
+    }
   `,
 
   smallButton: css`
@@ -39,6 +43,10 @@ const mixins = {
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
+    &:hover,
+    &:focus {
+      background-color: ${colors.lbg1};
+    }
   `,
 
   inlineLink: css`
