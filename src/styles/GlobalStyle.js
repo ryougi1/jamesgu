@@ -70,6 +70,16 @@ a {
   gatsby-image-outer-wrapper {
     height: 100%;
   }
+   
+  button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 0;
+    &:focus,
+    &:active {
+      outline-color: ${colors.lightblue};
+    }
+  }
 `;
 
 export default GlobalStyle;

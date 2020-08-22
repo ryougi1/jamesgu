@@ -31,10 +31,15 @@ const theme = {
     md: '16px',
     lg: '18px',
     xl: '20px',
+    xxl: '22px',
     h: '32px',
   },
 
   borderRadius: '10px',
+
+  tabHeight: 48,
+  tabWidth: 120,
+  radius: 3,
 };
 
 export default theme;

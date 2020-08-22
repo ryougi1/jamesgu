@@ -48,18 +48,17 @@ const mixins = {
     position: relative;
     transition: ${theme.transition};
     cursor: pointer;
-    color: ${colors.green};
+    color: ${colors.grey2};
     &:hover,
     &:focus,
     &:active {
-      color: ${colors.green};
+      color: ${colors.yellow};
       outline: 0;
       &:after {
         width: 100%;
       }
       & > * {
-        color: ${colors.green} !important;
-        transition: ${theme.transition};
+        color: ${colors.yellow} !important;
       }
     }
     &:after {
@@ -69,9 +68,39 @@ const mixins = {
       height: 1px;
       position: relative;
       bottom: 0.37em;
-      background-color: ${colors.green};
-      transition: ${theme.transition};
+      background-color: ${colors.yellow};
       opacity: 0.5;
+    }
+  `,
+  link: css`
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    cursor: pointer;
+    &:hover,
+    &:active,
+    &:focus {
+      color: ${colors.yellow};
+      outline: 0;
+    }
+  `,
+  fancyList: css`
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: ${fontSizes.lg};
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: ${colors.yellow};
+      }
     }
   `,
 };

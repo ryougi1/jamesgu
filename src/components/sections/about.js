@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { theme, mixins, Section, Heading } from '@styles';
@@ -99,7 +100,7 @@ const About = ({ data }) => {
         <StyledContent>
           <div dangerouslySetInnerHTML={{ __html: html }} />
           <SkillsContainer>
-            {skills && skills.map(skill => <Skill>{skill}</Skill>)}
+            {skills && skills.map((skill, i) => <Skill key={i}>{skill}</Skill>)}
           </SkillsContainer>
           <StyledDescription>{hobbies}</StyledDescription>
         </StyledContent>
@@ -111,6 +112,10 @@ const About = ({ data }) => {
       </StyledFlexContainer>
     </StyledContainer>
   );
+};
+
+About.propTypes = {
+  data: PropTypes.array.isRequired,
 };
 
 export default About;

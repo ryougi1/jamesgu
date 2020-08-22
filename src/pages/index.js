@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import { Layout, Hero, About } from '@components';
+import { Layout, Hero, About, Jobs } from '@components';
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
@@ -23,6 +23,7 @@ const IndexPage = ({ location, data }) => (
     <StyledMainContainer className="fillHeight">
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
+      <Jobs data={data.jobs.edges} />
     </StyledMainContainer>
   </Layout>
 );
@@ -65,6 +66,23 @@ export const pageQuery = graphql`
             }
             skills
             hobbies
+          }
+          html
+        }
+      }
+    }
+    jobs: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/jobs/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            company
+            location
+            range
+            url
           }
           html
         }

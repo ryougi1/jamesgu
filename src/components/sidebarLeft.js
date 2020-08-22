@@ -98,8 +98,10 @@ const SidebarLeft = () => (
       </StyledLogo>
       <StyledList>
         {navLinks &&
-          navLinks.map(({ url, name }) => (
-            <StyledLink to={url}>{name}</StyledLink>
+          navLinks.map(({ url, name }, i) => (
+            <StyledLink key={i} to={url}>
+              {name}
+            </StyledLink>
           ))}
         <StyledResumeButton
           href="/resume.pdf"

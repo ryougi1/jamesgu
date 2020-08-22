@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { SidebarLeft, SidebarRight } from '@components';
+import { Loader, SidebarLeft, SidebarRight } from '@components';
 import { GlobalStyle } from '@styles';
 
 const StyledContent = styled.div`
@@ -11,14 +11,27 @@ const StyledContent = styled.div`
 `;
 
 const Layout = ({ children, location }) => {
-  console.log(children);
+  const isHome = location.pathname === '/';
+  const [isLoading, setIsLoading] = useState(isHome);
+
+  useEffect(() => {
+    if (isLoading) {
+      return;
+    }
+  }, [isLoading]);
 
   return (
     <div id="root">
       {/* <Head metadata={site.siteMetadata} /> */}
 
       <GlobalStyle />
-
+      {/* {isLoading && isHome ? (
+        <Loader
+          finishLoading={() => {
+            setIsLoading(false);
+          }}
+        />
+      ) : ( */}
       <StyledContent>
         <SidebarLeft />
         <SidebarRight />
@@ -28,6 +41,7 @@ const Layout = ({ children, location }) => {
           {/* <Footer /> */}
         </div>
       </StyledContent>
+      {/* )} */}
     </div>
   );
 };
