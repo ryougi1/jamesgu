@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-// import { Loader, SidebarLeft, SidebarRight } from '@components';
-import { SidebarLeft, SidebarRight } from '@components';
+import { Loader, SidebarLeft, SidebarRight } from '@components';
 import { GlobalStyle } from '@styles';
 
 const StyledContent = styled.div`
@@ -26,23 +25,23 @@ const Layout = ({ children, location }) => {
       {/* <Head metadata={site.siteMetadata} /> */}
 
       <GlobalStyle />
-      {/* {isLoading && isHome ? (
+      {isLoading && isHome ? (
         <Loader
           finishLoading={() => {
             setIsLoading(false);
           }}
         />
-      ) : ( */}
-      <StyledContent>
-        <SidebarLeft />
-        <SidebarRight />
+      ) : (
+        <StyledContent>
+          <SidebarLeft />
+          <SidebarRight />
 
-        <div id="content">
-          {children}
-          {/* <Footer /> */}
-        </div>
-      </StyledContent>
-      {/* )} */}
+          <div id="content">
+            {children}
+            {/* <Footer /> */}
+          </div>
+        </StyledContent>
+      )}
     </div>
   );
 };

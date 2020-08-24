@@ -4,9 +4,6 @@ import styled from 'styled-components';
 import { theme, mixins, Section, Heading } from '@styles';
 const { colors, fontSizes, fonts } = theme;
 
-const StyledContainer = styled(Section)`
-  position: relative;
-`;
 const StyledTab = styled.div`
   display: flex;
   align-items: flex-start;
@@ -55,6 +52,7 @@ const StyledTabContent = styled.div`
   height: auto;
   padding-top: 12px;
   padding-left: 30px;
+  outline: none;
   ul {
     ${mixins.fancyList};
   }
@@ -87,7 +85,7 @@ const Jobs = ({ data }) => {
   // console.log(data);
 
   return (
-    <StyledContainer id="jobs">
+    <Section id="jobs">
       <Heading>Experience</Heading>
       <StyledTab>
         <StyledTabList role="tablist" aria-label="Job tabs">
@@ -144,7 +142,7 @@ const Jobs = ({ data }) => {
             );
           })}
       </StyledTab>
-    </StyledContainer>
+    </Section>
   );
 };
 

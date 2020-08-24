@@ -5,9 +5,6 @@ import Img from 'gatsby-image';
 import { theme, mixins, Section, Heading } from '@styles';
 const { colors, fontSizes, fonts } = theme;
 
-const StyledContainer = styled(Section)`
-  position: relative;
-`;
 const StyledFlexContainer = styled.div`
   ${mixins.flexBetween};
   align-items: flex-start;
@@ -94,7 +91,7 @@ const About = ({ data }) => {
   const { title, skills, avatar, hobbies } = frontmatter;
 
   return (
-    <StyledContainer id="about">
+    <Section id="about">
       <Heading>{title}</Heading>
       <StyledFlexContainer>
         <StyledContent>
@@ -110,7 +107,7 @@ const About = ({ data }) => {
           </StyledBoxBorder>
         </StyledPic>
       </StyledFlexContainer>
-    </StyledContainer>
+    </Section>
   );
 };
 
